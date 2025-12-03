@@ -6,7 +6,7 @@ import { Shield, Zap, Brain } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center">
       {/* Neural Background Pattern */}
       <div className="absolute inset-0 neural-pattern opacity-30" />
       
@@ -92,3 +92,4 @@ export function Hero() {
     </section>
   );
 }
+

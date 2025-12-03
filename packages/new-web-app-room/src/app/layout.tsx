@@ -20,15 +20,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {/* Aurora Background Layers */}
-        <div className="fixed inset-0 bg-aurora-layer-1"></div>
-        <div className="fixed inset-0 bg-aurora-layer-2"></div>
-        <div className="fixed inset-0 bg-aurora-layer-3"></div>
-        <div className="fixed inset-0 bg-particles"></div>
+        <div className="fixed inset-0 bg-aurora-layer-1 pointer-events-none"></div>
+        <div className="fixed inset-0 bg-aurora-layer-2 pointer-events-none"></div>
+        <div className="fixed inset-0 bg-aurora-layer-3 pointer-events-none"></div>
+        <div className="fixed inset-0 bg-particles pointer-events-none"></div>
         
         {/* Main Content */}
-        <div className="relative z-10">
+        <div className="relative z-10 min-h-screen">
           <Navbar />
-          <main className="min-h-screen pt-16">
+          <main className="pt-16">
             {children}
           </main>
           <Footer />
@@ -37,4 +37,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+
 

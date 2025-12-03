@@ -20,8 +20,7 @@
 }
 
 /* Full-height baseline with scroll enabled */
-html, body {
-  height: 100%;
+html {
   overflow-x: hidden; /* Only hide horizontal scroll */
   overflow-y: auto;   /* Allow vertical scroll */
 }
@@ -30,6 +29,9 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden; /* Only hide horizontal scroll */
+  overflow-y: auto;   /* Allow vertical scroll */
+  min-height: 100vh;  /* Use min-height instead of height */
 }
 
 /* Enhanced animated aurora gradient layers - 25% more intense */
@@ -222,5 +224,6 @@ body {
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
 
 
