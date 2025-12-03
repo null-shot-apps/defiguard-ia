@@ -1,5 +1,5 @@
 export class BlockchainMCP {
-  async getContractInfo(address: string, chainId: number): Promise<{
+  async getContractInfo(_address: string, _chainId: number): Promise<{
     verified: boolean;
     transactions: number;
     holders: number;
@@ -14,9 +14,11 @@ export class BlockchainMCP {
     };
   }
 
-  async getTransactionHistory(address: string): Promise<any[]> {
+  async getTransactionHistory(_address: string): Promise<any[]> {
     return [];
   }
 }
 
 export const blockchainMCP = new BlockchainMCP();
+
+

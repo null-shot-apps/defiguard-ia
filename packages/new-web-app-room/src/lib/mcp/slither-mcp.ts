@@ -1,5 +1,5 @@
 export class SlitherMCP {
-  async analyzeContract(code: string): Promise<{
+  async analyzeContract(_code: string): Promise<{
     vulnerabilities: string[];
     gasIssues: string[];
     codeQuality: number;
@@ -15,3 +15,4 @@ export class SlitherMCP {
 }
 
 export const slitherMCP = new SlitherMCP();
+

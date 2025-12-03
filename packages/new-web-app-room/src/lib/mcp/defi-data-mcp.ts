@@ -1,5 +1,5 @@
 export class DeFiDataMCP {
-  async getExploitHistory(contractType: string): Promise<string[]> {
+  async getExploitHistory(_contractType: string): Promise<string[]> {
     // Returns historical exploits related to contract patterns
     return [
       "DAO Hack 2016 - Reentrancy",
@@ -7,9 +7,11 @@ export class DeFiDataMCP {
     ];
   }
 
-  async getSimilarContracts(address: string): Promise<string[]> {
+  async getSimilarContracts(_address: string): Promise<string[]> {
     return [];
   }
 }
 
 export const defiDataMCP = new DeFiDataMCP();
+
+

@@ -1,21 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { VulnerabilityCard } from "./vulnerability-card";
-import { VulnerabilityAnalysis, Vulnerability } from "@/lib/gemini/client";
+import { VulnerabilityAnalysis } from "@/lib/gemini/client";
 import { formatRiskScore } from "@/lib/utils";
-import { Shield, AlertTriangle, Zap, CheckCircle, TrendingUp, Code } from "lucide-react";
+import { Shield, AlertTriangle, Zap, CheckCircle, TrendingUp } from "lucide-react";
 
 interface AnalysisResultsProps {
   analysis: VulnerabilityAnalysis;
 }
 
 export function AnalysisResults({ analysis }: AnalysisResultsProps) {
-  const [selectedVulnerability, setSelectedVulnerability] = useState<Vulnerability | null>(null);
+  // const [selectedVulnerability, setSelectedVulnerability] = useState<Vulnerability | null>(null);
   const riskInfo = formatRiskScore(analysis.riskScore);
 
   const criticalCount = analysis.vulnerabilities.filter(v => v.severity === "Critical").length;
@@ -122,7 +122,6 @@ export function AnalysisResults({ analysis }: AnalysisResultsProps) {
                 <VulnerabilityCard
                   key={index}
                   vulnerability={vulnerability}
-                  onViewFix={setSelectedVulnerability}
                 />
               ))}
             </div>
@@ -206,3 +205,9 @@ export function AnalysisResults({ analysis }: AnalysisResultsProps) {
     </div>
   );
 }
+
+
+
+
+
+

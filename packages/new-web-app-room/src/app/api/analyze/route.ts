@@ -3,7 +3,8 @@ import { auditorAgent } from "@/lib/agents/auditor-agent";
 
 export async function POST(request: NextRequest) {
   try {
-    const { code } = await request.json();
+    const body = await request.json();
+    const { code } = body as { code: string };
 
     if (!code || typeof code !== "string") {
       return NextResponse.json(
@@ -24,3 +25,4 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+

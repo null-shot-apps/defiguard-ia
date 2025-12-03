@@ -25,7 +25,7 @@ export default function AuditPage() {
       }
 
       const result = await response.json();
-      setAnalysis(result);
+      setAnalysis(result as VulnerabilityAnalysis);
     } catch (error) {
       console.error("Analysis error:", error);
       // For demo purposes, show a mock analysis if API fails
@@ -77,3 +77,4 @@ export default function AuditPage() {
     </div>
   );
 }
+

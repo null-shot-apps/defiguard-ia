@@ -3,7 +3,8 @@ import { analyzeContractWithGemini } from "@/lib/gemini/client";
 
 export async function POST(request: NextRequest) {
   try {
-    const { code } = await request.json();
+    const body = await request.json();
+    const { code } = body as { code: string };
 
     if (!code) {
       return NextResponse.json(
@@ -22,3 +23,4 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
