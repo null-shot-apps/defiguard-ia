@@ -19,10 +19,11 @@
   }
 }
 
-/* Non-scroll and full-height baseline */
+/* Full-height baseline with scroll enabled */
 html, body {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden; /* Only hide horizontal scroll */
+  overflow-y: auto;   /* Allow vertical scroll */
 }
 
 body {
@@ -221,4 +222,5 @@ body {
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
 
